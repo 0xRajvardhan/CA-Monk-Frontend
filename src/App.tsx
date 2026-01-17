@@ -1,35 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Routes, Route, Navigate } from "react-router-dom";
+import BlogsPage from "./pages/BlogPage";
+import BlogDetail from "./components/BlogDetail";
+import CreateBlog from "./components/CreateBlog";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <Routes>
+      <Route path="/" element={<Navigate to="/blogs" replace />} />
+
+      <Route path="/blogs" element={<BlogsPage />}>
+        <Route index element={<Navigate to=":first" replace />} />
+        <Route path=":id" element={<BlogDetail />} />
+      </Route>
+
+      <Route path="/create" element={<CreateBlog />} />
+    </Routes>
+  );
 }
 
-export default App
+export default App;
