@@ -9,7 +9,7 @@ function App() {
       <Route path="/" element={<Navigate to="/blogs" replace />} />
 
       <Route path="/blogs" element={<BlogsPage />}>
-        <Route index element={<Navigate to=":first" replace />} />
+        {/* <Route index element={<Navigate to=":first" replace />} /> */}
         <Route path=":id" element={<BlogDetail />} />
       </Route>
 
