@@ -1,3 +1,11 @@
+# My work - 
+<img width="1895" height="910" alt="image" src="https://github.com/user-attachments/assets/6f226079-b3c7-47eb-b027-5ac60e1a9dde" />
+<img width="1900" height="907" alt="image" src="https://github.com/user-attachments/assets/66c26be4-2f3e-4928-9152-e44a35a4ea0c" />
+<img width="1898" height="909" alt="image" src="https://github.com/user-attachments/assets/a4260e8a-d5b2-458a-ab90-555891961fdd" />
+
+
+
+
 # CA Monk - Blog Application Assignment
 
 Welcome to the CA Monk Blog Application assignment! This project tests your ability to build a modern React application with state management, styling, and component libraries.
